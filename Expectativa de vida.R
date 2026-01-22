@@ -36,6 +36,15 @@ grafico1 <- ggplot( data = dataset_filtrado,
     legend.text = element_text(size = 10)      
   )
 
+#Nesse gráfico, cada ponto representa um país diferente. 
+#A posição horizontal do ponto mostra o tamanho da população 
+#(países menores à esquerda, maiores à direita), enquanto a 
+#posição vertical mostra a expectativa de vida (países com vida 
+#mais longa em cima, mais curta embaixo).
+#A linha preta suave confirma essa falta de relação: ela é quase 
+#reta e horizontal, indicando que a expectativa de vida não aumenta 
+#nem diminui conforme a população cresce. 
+
 ggsave("grafico_populacao_expectativa.png", 
        plot = grafico1,
        width = 10,    
@@ -76,4 +85,5 @@ ggsave("grafico_densidade.png",
 # por todo o gráfico. Portanto, a expectativa está atrelada a outros fatores (sociais, 
 # economicos, ou etc), tendo em vista que países de mesmo continente possuem menor variação
 # entre si de suas expectativas de vida
+
 
